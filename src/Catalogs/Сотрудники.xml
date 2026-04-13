@@ -45,7 +45,7 @@
 			<AuxiliaryObjectForm/>
 			<ListForm>Catalog.Сотрудники.ФормаСписка</ListForm>
 			<ChoiceForm/>
-			<ObjectForm/>
+			<ObjectForm>Catalog.Сотрудники.ФормаАдминистратора</ObjectForm>
 			<FolderChoiceForm/>
 			<FolderForm/>
 			<Attributes>
