@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xr:Rights xmlns="http://v8.1c.ru/8.2/managed-application/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xr:RightsCollection">
 	<xr:Rights>
-		<!-- Сотрудники: только чтение и просмотр -->
+		<!-- Сотрудники: только чтение, просмотр и ввод по строкам -->
 		<xr:Right>
 			<xr:Name>Read</xr:Name>
 			<xr:Value>Catalog.Сотрудники</xr:Value>
@@ -20,7 +20,7 @@
 			<xr:Use>true</xr:Use>
 			<xr:Condition/>
 		</xr:Right>
-		<!-- Контрагенты: чтение, добавление, изменение, пометка удаления -->
+		<!-- Контрагенты: чтение, просмотр, ввод по строкам, добавление, изменение -->
 		<xr:Right>
 			<xr:Name>Read</xr:Name>
 			<xr:Value>Catalog.Контрагенты</xr:Value>
@@ -51,13 +51,7 @@
 			<xr:Use>true</xr:Use>
 			<xr:Condition/>
 		</xr:Right>
-		<xr:Right>
-			<xr:Name>InteractiveDeleteMarked</xr:Name>
-			<xr:Value>Catalog.Контрагенты</xr:Value>
-			<xr:Use>true</xr:Use>
-			<xr:Condition/>
-		</xr:Right>
-		<!-- Перечисления: чтение и ввод по строке -->
+		<!-- Перечисления: чтение, просмотр и ввод по строкам -->
 		<xr:Right>
 			<xr:Name>Read</xr:Name>
 			<xr:Value>Enum.ЮридическоеФизическоеЛицо</xr:Value>
@@ -94,7 +88,7 @@
 			<xr:Use>true</xr:Use>
 			<xr:Condition/>
 		</xr:Right>
-		<!-- Константы: чтение -->
+		<!-- Константы: чтение, просмотр и ввод по строкам -->
 		<xr:Right>
 			<xr:Name>Read</xr:Name>
 			<xr:Value>Constant.ВестиРасчётЗарплаты</xr:Value>
@@ -104,6 +98,31 @@
 		<xr:Right>
 			<xr:Name>View</xr:Name>
 			<xr:Value>Constant.ВестиРасчётЗарплаты</xr:Value>
+			<xr:Use>true</xr:Use>
+			<xr:Condition/>
+		</xr:Right>
+		<xr:Right>
+			<xr:Name>InputByString</xr:Name>
+			<xr:Value>Constant.ВестиРасчётЗарплаты</xr:Value>
+			<xr:Use>true</xr:Use>
+			<xr:Condition/>
+		</xr:Right>
+		<!-- Определяемые типы: чтение, просмотр и ввод по строкам -->
+		<xr:Right>
+			<xr:Name>Read</xr:Name>
+			<xr:Value>DefinedType.Сумма</xr:Value>
+			<xr:Use>true</xr:Use>
+			<xr:Condition/>
+		</xr:Right>
+		<xr:Right>
+			<xr:Name>View</xr:Name>
+			<xr:Value>DefinedType.Сумма</xr:Value>
+			<xr:Use>true</xr:Use>
+			<xr:Condition/>
+		</xr:Right>
+		<xr:Right>
+			<xr:Name>InputByString</xr:Name>
+			<xr:Value>DefinedType.Сумма</xr:Value>
 			<xr:Use>true</xr:Use>
 			<xr:Condition/>
 		</xr:Right>
