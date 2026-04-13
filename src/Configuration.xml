@@ -261,6 +261,7 @@
 			<Role>ПолныеПрава</Role>
 			<Role>БазовыеПрава</Role>
 			<FunctionalOption>ВестиРасчётЗарплаты</FunctionalOption>
+			<DefinedType>Сумма</DefinedType>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

@@ -76,10 +76,7 @@
 				<Attribute uuid="a1b2c3d4-0003-0004-0000-000000000004">
 					<Name>Оклад</Name>
 					<Type>
-						<xs:element name="Number">
-							<xs:attribute name="Length" type="xs:positiveInteger" fixed="15"/>
-							<xs:attribute name="FractionDigits" type="xs:positiveInteger" fixed="2"/>
-						</xs:element>
+						<xr:Ref>DefinedType.Сумма</xr:Ref>
 					</Type>
 				</Attribute>
 				<Attribute uuid="a1b2c3d4-0003-0005-0000-000000000005">
@@ -91,10 +88,7 @@
 				<Attribute uuid="a1b2c3d4-0003-0006-0000-000000000006">
 					<Name>СтавкаЧаса</Name>
 					<Type>
-						<xs:element name="Number">
-							<xs:attribute name="Length" type="xs:positiveInteger" fixed="15"/>
-							<xs:attribute name="FractionDigits" type="xs:positiveInteger" fixed="2"/>
-						</xs:element>
+						<xr:Ref>DefinedType.Сумма</xr:Ref>
 					</Type>
 				</Attribute>
 				<Attribute uuid="a1b2c3d4-0003-0007-0000-000000000007">
