@@ -255,6 +255,7 @@
 			<Catalog>Сотрудники</Catalog>
 			<Catalog>Контрагенты</Catalog>
 			<CommonModule>Сеанс</CommonModule>
+			<CommonModule>ОбщегоНазначения</CommonModule>
 			<CommonForm>НастройкаПрограммы</CommonForm>
 			<CommonCommand>НастройкаПрограммы</CommonCommand>
 			<Role>ПолныеПрава</Role>
