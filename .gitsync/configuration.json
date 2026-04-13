@@ -1,10 +1,10 @@
 {
     "storage": "./src",
-    "ib": "",
+    "ib": "File=\"C:\\Netology\\ClaudeBase\";",
     "db-user": "",
     "db-pwd": "",
-    "ib-user": "",
-    "ib-pwd": "",
+    "ib-user": "Администратор",
+    "ib-pwd": "123",
     "branch": "main",
     "push-period": 0,
     "repo": ""
