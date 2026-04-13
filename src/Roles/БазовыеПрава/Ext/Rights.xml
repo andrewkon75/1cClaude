@@ -101,12 +101,6 @@
 			<xr:Use>true</xr:Use>
 			<xr:Condition/>
 		</xr:Right>
-		<xr:Right>
-			<xr:Name>InputByString</xr:Name>
-			<xr:Value>Constant.ВестиРасчётЗарплаты</xr:Value>
-			<xr:Use>true</xr:Use>
-			<xr:Condition/>
-		</xr:Right>
 		<!-- Определяемые типы: чтение, просмотр и ввод по строкам -->
 		<xr:Right>
 			<xr:Name>Read</xr:Name>
