@@ -1,0 +1,11 @@
+{
+    "storage": "./src",
+    "ib": "",
+    "db-user": "",
+    "db-pwd": "",
+    "ib-user": "",
+    "ib-pwd": "",
+    "branch": "main",
+    "push-period": 0,
+    "repo": ""
+}

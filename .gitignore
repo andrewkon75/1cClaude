@@ -10,8 +10,8 @@
 *.cdtsync
 *.settings
 
-# gitsync
-.gitsync/
+# gitsync (credentials should NOT be committed)
+.gitsync/credentials.json
 
 # OS
 .DS_Store
@@ -19,4 +19,3 @@ Thumbs.db
 
 # IDE
 .idea/
-.vscode/settings.json
