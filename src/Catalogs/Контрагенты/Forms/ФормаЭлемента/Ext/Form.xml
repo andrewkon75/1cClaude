@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/managed-application/form" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:TypeRef>CatalogObject.Контрагенты</v8:TypeRef>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолноеНаименованиеЗаполненоВручную" id="2">
+			<Type>
+				<xs:element name="Boolean"/>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Elements>
+		<InputField name="Наименование" id="10">
+			<DataPath>Объект.Description</DataPath>
+			<Events>
+				<Event name="OnChange">НаименованиеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ПолноеНаименование" id="11">
+			<DataPath>Объект.ПолноеНаименование</DataPath>
+			<Events>
+				<Event name="OnChange">ПолноеНаименованиеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ИНН" id="12">
+			<DataPath>Объект.ИНН</DataPath>
+			<Events>
+				<Event name="OnChange">ИННПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="КПП" id="13">
+			<DataPath>Объект.КПП</DataPath>
+		</InputField>
+		<InputField name="Тип" id="14">
+			<DataPath>Объект.Тип</DataPath>
+			<Events>
+				<Event name="OnChange">ТипПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Ответственный" id="15">
+			<DataPath>Объект.Ответственный</DataPath>
+		</InputField>
+		<InputField name="Email" id="16">
+			<DataPath>Объект.Email</DataPath>
+		</InputField>
+		<InputField name="Телефон" id="17">
+			<DataPath>Объект.Телефон</DataPath>
+		</InputField>
+		<InputField name="ФактическийАдрес" id="18">
+			<DataPath>Объект.ФактическийАдрес</DataPath>
+		</InputField>
+		<InputField name="ЮридическийАдрес" id="19">
+			<DataPath>Объект.ЮридическийАдрес</DataPath>
+		</InputField>
+	</Elements>
+</Form>

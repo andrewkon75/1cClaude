@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module xmlns="http://v8.1c.ru/8.3/managed-application/module" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Procedure name="ОбработкаПолученияФормы">
+		<Parameter name="Форма">
+			<Type>
+				<xs:element name="ManagedForm"/>
+			</Type>
+		</Parameter>
+		<Parameter name="СтандартнаяОбработка">
+			<Type>
+				<xs:element name="Boolean"/>
+			</Type>
+		</Parameter>
+		<Body>
+			<Line>
+				<Val>Если ПравоДоступа("Администрирование", Метаданные) Тогда</Val>
+			</Line>
+			<Line>
+				<Val>	Форма = Метаданные.Формы.ФормаАдминистратора;</Val>
+			</Line>
+			<Line>
+				<Val>Иначе</Val>
+			</Line>
+			<Line>
+				<Val>	Форма = Метаданные.Формы.ФормаПользователя;</Val>
+			</Line>
+			<Line>
+				<Val>КонецЕсли;</Val>
+			</Line>
+		</Body>
+	</Procedure>
+</Module>

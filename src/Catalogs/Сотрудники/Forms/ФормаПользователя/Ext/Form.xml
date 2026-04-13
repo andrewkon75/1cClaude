@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/managed-application/form" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+	</Events>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:TypeRef>CatalogObject.Сотрудники</v8:TypeRef>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Elements>
+		<UsrGroup name="ГруппаОсновное" id="10">
+			<Type>UsrGroup</Type>
+			<Title>Основное</Title>
+			<ChildItems>
+				<InputField name="Наименование" id="11">
+					<DataPath>Объект.Description</DataPath>
+				</InputField>
+				<InputField name="Код" id="12">
+					<DataPath>Объект.Code</DataPath>
+				</InputField>
+				<InputField name="Email" id="13">
+					<DataPath>Объект.Email</DataPath>
+				</InputField>
+				<InputField name="ДатаРождения" id="14">
+					<DataPath>Объект.ДатаРождения</DataPath>
+				</InputField>
+				<InputField name="Пол" id="15">
+					<DataPath>Объект.Пол</DataPath>
+				</InputField>
+			</ChildItems>
+		</UsrGroup>
+		<UsrGroup name="ГруппаЗарплата" id="20">
+			<Type>UsrGroup</Type>
+			<Title>Зарплата</Title>
+			<ChildItems>
+				<InputField name="Оклад" id="21">
+					<DataPath>Объект.Оклад</DataPath>
+				</InputField>
+				<InputField name="СтавкаЧаса" id="22">
+					<DataPath>Объект.СтавкаЧаса</DataPath>
+				</InputField>
+			</ChildItems>
+		</UsrGroup>
+		<UsrGroup name="ГруппаКонтакты" id="30">
+			<Type>UsrGroup</Type>
+			<Title>Контакты</Title>
+			<ChildItems>
+				<InputField name="Телефон" id="31">
+					<DataPath>Объект.Телефон</DataPath>
+				</InputField>
+			</ChildItems>
+		</UsrGroup>
+	</Elements>
+</Form>

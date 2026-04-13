@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Catalog uuid="a1b2c3d4-0004-0000-0000-000000000004">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.Контрагенты" category="Object"/>
+			<xr:GeneratedType name="CatalogRef.Контрагенты" category="Ref"/>
+			<xr:GeneratedType name="CatalogSelection.Контрагенты" category="Selection"/>
+			<xr:GeneratedType name="CatalogList.Контрагенты" category="List"/>
+			<xr:GeneratedType name="CatalogManager.Контрагенты" category="Manager"/>
+		</InternalInfo>
+		<Properties>
+			<Name>Контрагенты</Name>
+			<Synonym/>
+			<Comment/>
+			<ObjectPresentation/>
+			<ExtendedObjectPresentation/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Owners/>
+			<SubordinationUse>ToItems</SubordinationUse>
+			<CodeLength>9</CodeLength>
+			<CodeType>String</CodeType>
+			<CodeAllowedLength>Variable</CodeAllowedLength>
+			<CodeSeries>WholeCatalog</CodeSeries>
+			<CheckUnique>true</CheckUnique>
+			<Autonumbering>true</Autonumbering>
+			<DefaultPresentation>AsDescription</DefaultPresentation>
+			<StandardAttributes>
+				<xr:StandardAttribute Name="Code">
+					<xr:Synonym>Код</xr:Synonym>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute Name="Description">
+					<xr:Synonym>Наименование</xr:Synonym>
+				</xr:StandardAttribute>
+			</StandardAttributes>
+			<Hierarchical>false</Hierarchical>
+			<HierarchyType>HierarchyFoldersAndItems</HierarchyType>
+			<FoldersOnTop>false</FoldersOnTop>
+			<HasOwners>true</HasOwners>
+			<HasSubordinateItems>false</HasSubordinateItems>
+			<CodeMaxNumber>999999999</CodeMaxNumber>
+			<PredefinedDataUpdate>Auto</PredefinedDataUpdate>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<AuxiliaryObjectForm/>
+			<ListForm>Catalog.Контрагенты.ФормаСписка</ListForm>
+			<ChoiceForm/>
+			<ObjectForm>Catalog.Контрагенты.ФормаЭлемента</ObjectForm>
+			<FolderChoiceForm/>
+			<FolderForm/>
+			<Attributes>
+				<Attribute uuid="a1b2c3d4-0004-0001-0000-000000000001">
+					<Name>ПолноеНаименование</Name>
+					<Type>
+						<xs:element name="String">
+							<xs:attribute name="Length" type="xs:positiveInteger" fixed="500"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0004-0002-0000-000000000002">
+					<Name>ИНН</Name>
+					<Type>
+						<xs:element name="String">
+							<xs:attribute name="Length" type="xs:positiveInteger" fixed="12"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0004-0003-0000-000000000003">
+					<Name>КПП</Name>
+					<Type>
+						<xs:element name="String">
+							<xs:attribute name="Length" type="xs:positiveInteger" fixed="9"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0004-0004-0000-000000000004">
+					<Name>Email</Name>
+					<Type>
+						<xs:element name="String">
+							<xs:attribute name="Length" type="xs:positiveInteger" fixed="255"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0004-0005-0000-000000000005">
+					<Name>Телефон</Name>
+					<Type>
+						<xs:element name="String">
+							<xs:attribute name="Length" type="xs:positiveInteger" fixed="50"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0004-0006-0000-000000000006">
+					<Name>ФактическийАдрес</Name>
+					<Type>
+						<xs:element name="String">
+							<xs:attribute name="Length" type="xs:positiveInteger" fixed="500"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0004-0007-0000-000000000007">
+					<Name>ЮридическийАдрес</Name>
+					<Type>
+						<xs:element name="String">
+							<xs:attribute name="Length" type="xs:positiveInteger" fixed="500"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0004-0008-0000-000000000008">
+					<Name>Тип</Name>
+					<Type>
+						<xr:Ref>Enum.ЮридическоеФизическоеЛицо</xr:Ref>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0004-0009-0000-000000000009">
+					<Name>Ответственный</Name>
+					<Type>
+						<xr:Ref>Catalog.Сотрудники</xr:Ref>
+					</Type>
+				</Attribute>
+			</Attributes>
+		</Properties>
+		<ChildObjects>
+			<Form>ФормаСписка</Form>
+			<Form>ФормаЭлемента</Form>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module xmlns="http://v8.1c.ru/8.2/managed-application/module" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ManagedFormModule>
+<Line>
+<Val>// При чтении на сервере - скрываем зарплатные поля если расчёт не ведётся</Val>
+</Line>
+<Line>
+<Val>Процедура ПриЧтенииНаСервере(ОбъектНаСервере, Форма, СтандартнаяОбработка)</Val>
+</Line>
+<Line>
+<Val>	ВестиРасчётЗарплаты = Константы.ВестиРасчётЗарплаты.Получить();</Val>
+</Line>
+<Line>
+<Val>	Элементы.Оклад.Видимость = ВестиРасчётЗарплаты;</Val>
+</Line>
+<Line>
+<Val>	Элементы.СтавкаЧаса.Видимость = ВестиРасчётЗарплаты;</Val>
+</Line>
+<Line>
+<Val>КонецПроцедуры</Val>
+</Line>
+</ManagedFormModule>
+</Module>

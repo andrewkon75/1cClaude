@@ -32,7 +32,7 @@
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>Конфигурация</Name>
+			<Name>УправлениеИТФирмой</Name>
 			<Synonym/>
 			<Comment/>
 			<NamePrefix/>
@@ -242,10 +242,24 @@
 			<DatabaseTablespacesUseMode>DontUse</DatabaseTablespacesUseMode>
 			<CompatibilityMode>Version8_3_27</CompatibilityMode>
 			<DefaultConstantsForm/>
+			<SessionParameters>
+				<Parameter>ТекущийСотрудник</Parameter>
+			</SessionParameters>
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
-			<Role>Полные</Role>
+			<Subsystem>Настройки</Subsystem>
+			<Enum>ЮридическоеФизическоеЛицо</Enum>
+			<Enum>Пол</Enum>
+			<Constant>ВестиРасчётЗарплаты</Constant>
+			<Catalog>Сотрудники</Catalog>
+			<Catalog>Контрагенты</Catalog>
+			<CommonModule>Сеанс</CommonModule>
+			<CommonForm>НастройкаПрограммы</CommonForm>
+			<CommonCommand>НастройкаПрограммы</CommonCommand>
+			<Role>ПолныеПрава</Role>
+			<Role>БазовыеПрава</Role>
+			<FunctionalOption>ВестиРасчётЗарплаты</FunctionalOption>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

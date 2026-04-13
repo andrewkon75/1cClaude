@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/managed-application/form" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="СлучайныйПароль" id="100">
+				<Type>CommandBarButton</Type>
+				<CommandName>FormCommand.СлучайныйПароль</CommandName>
+				<Title>Случайный пароль</Title>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:TypeRef>CatalogObject.Сотрудники</v8:TypeRef>
+			</Type>
+		</Attribute>
+		<Attribute name="ВходРазрешён" id="2">
+			<Type>
+				<xs:element name="Boolean"/>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяДляВхода" id="3">
+			<Type>
+				<xs:element name="String">
+					<xs:attribute name="Length" type="xs:positiveInteger" fixed="100"/>
+				</xs:element>
+			</Type>
+		</Attribute>
+		<Attribute name="Пароль" id="4">
+			<Type>
+				<xs:element name="String">
+					<xs:attribute name="Length" type="xs:positiveInteger" fixed="100"/>
+				</xs:element>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Elements>
+		<UsrGroup name="ГруппаСотрудник" id="10">
+			<Type>UsrGroup</Type>
+			<Title>Сотрудник</Title>
+			<ChildItems>
+				<InputField name="Наименование" id="11">
+					<DataPath>Объект.Description</DataPath>
+				</InputField>
+				<InputField name="Код" id="12">
+					<DataPath>Объект.Code</DataPath>
+				</InputField>
+				<InputField name="Email" id="13">
+					<DataPath>Объект.Email</DataPath>
+				</InputField>
+				<InputField name="ДатаРождения" id="14">
+					<DataPath>Объект.ДатаРождения</DataPath>
+				</InputField>
+				<InputField name="ИдентификаторПользователяИБ" id="15">
+					<DataPath>Объект.ИдентификаторПользователяИБ</DataPath>
+				</InputField>
+				<InputField name="Оклад" id="16">
+					<DataPath>Объект.Оклад</DataPath>
+				</InputField>
+				<InputField name="Пол" id="17">
+					<DataPath>Объект.Пол</DataPath>
+				</InputField>
+				<InputField name="СтавкаЧаса" id="18">
+					<DataPath>Объект.СтавкаЧаса</DataPath>
+				</InputField>
+				<InputField name="Телефон" id="19">
+					<DataPath>Объект.Телефон</DataPath>
+				</InputField>
+			</ChildItems>
+		</UsrGroup>
+		<UsrGroup name="ГруппаПользовательИБ" id="20">
+			<Type>UsrGroup</Type>
+			<Title>Пользователь ИБ</Title>
+			<ChildItems>
+				<CheckBoxField name="ВходРазрешён" id="21">
+					<DataPath>ВходРазрешён</DataPath>
+				</CheckBoxField>
+				<InputField name="ИмяДляВхода" id="22">
+					<DataPath>ИмяДляВхода</DataPath>
+				</InputField>
+				<InputField name="Пароль" id="23">
+					<DataPath>Пароль</DataPath>
+					<PasswordMode>true</PasswordMode>
+				</InputField>
+			</ChildItems>
+		</UsrGroup>
+	</Elements>
+	<Commands>
+		<Command name="СлучайныйПароль" id="1">
+			<Body>
+				<Line>
+					<Val>Символы = "abcdefghijklmnopqrstuvwxyz0123456789";</Val>
+				</Line>
+				<Line>
+					<Val>ДлинаПароля = 6;</Val>
+				</Line>
+				<Line>
+					<Val>Пароль = "";</Val>
+				</Line>
+				<Line>
+					<Val>Для i = 1 По ДлинаПароля Цикл</Val>
+				</Line>
+				<Line>
+					<Val>	Пароль = Пароль + Сред(Символы, СлучайноеЧисло(1, СтрДлина(Символы)), 1);</Val>
+				</Line>
+				<Line>
+					<Val>КонецЦикла;</Val>
+				</Line>
+				<Line>
+					<Val>Пароль = Пароль;</Val>
+				</Line>
+				<Line>
+					<Val>Элементы.Пароль.PasswordMode = Ложь;</Val>
+				</Line>
+			</Body>
+		</Command>
+	</Commands>
+</Form>

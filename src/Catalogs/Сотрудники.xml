@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Catalog uuid="a1b2c3d4-0003-0000-0000-000000000003">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.Сотрудники" category="Object"/>
+			<xr:GeneratedType name="CatalogRef.Сотрудники" category="Ref"/>
+			<xr:GeneratedType name="CatalogSelection.Сотрудники" category="Selection"/>
+			<xr:GeneratedType name="CatalogList.Сотрудники" category="List"/>
+			<xr:GeneratedType name="CatalogManager.Сотрудники" category="Manager"/>
+		</InternalInfo>
+		<Properties>
+			<Name>Сотрудники</Name>
+			<Synonym/>
+			<Comment/>
+			<ObjectPresentation/>
+			<ExtendedObjectPresentation/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Owners/>
+			<SubordinationUse>ToItems</SubordinationUse>
+			<CodeLength>9</CodeLength>
+			<CodeType>String</CodeType>
+			<CodeAllowedLength>Variable</CodeAllowedLength>
+			<CodeSeries>WholeCatalog</CodeSeries>
+			<CheckUnique>true</CheckUnique>
+			<Autonumbering>true</Autonumbering>
+			<DefaultPresentation>AsDescription</DefaultPresentation>
+			<StandardAttributes>
+				<xr:StandardAttribute Name="Code">
+					<xr:Synonym>Табельный номер</xr:Synonym>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute Name="Description">
+					<xr:Synonym>ФИО</xr:Synonym>
+				</xr:StandardAttribute>
+			</StandardAttributes>
+			<Hierarchical>false</Hierarchical>
+			<HierarchyType>HierarchyFoldersAndItems</HierarchyType>
+			<FoldersOnTop>false</FoldersOnTop>
+			<HasOwners>true</HasOwners>
+			<HasSubordinateItems>false</HasSubordinateItems>
+			<CodeMaxNumber>999999999</CodeMaxNumber>
+			<PredefinedDataUpdate>Auto</PredefinedDataUpdate>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<AuxiliaryObjectForm/>
+			<ListForm>Catalog.Сотрудники.ФормаСписка</ListForm>
+			<ChoiceForm/>
+			<ObjectForm/>
+			<FolderChoiceForm/>
+			<FolderForm/>
+			<Attributes>
+				<Attribute uuid="a1b2c3d4-0003-0001-0000-000000000001">
+					<Name>Email</Name>
+					<Type>
+						<xs:element name="String">
+							<xs:attribute name="Length" type="xs:positiveInteger" fixed="255"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0003-0002-0000-000000000002">
+					<Name>ДатаРождения</Name>
+					<Type>
+						<xs:element name="Date">
+							<xs:attribute name="dateType" type="xs:positiveInteger" fixed="Date"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0003-0003-0000-000000000003">
+					<Name>ИдентификаторПользователяИБ</Name>
+					<Type>
+						<xs:element name="String">
+							<xs:attribute name="Length" type="xs:positiveInteger" fixed="36"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0003-0004-0000-000000000004">
+					<Name>Оклад</Name>
+					<Type>
+						<xs:element name="Number">
+							<xs:attribute name="Length" type="xs:positiveInteger" fixed="15"/>
+							<xs:attribute name="FractionDigits" type="xs:positiveInteger" fixed="2"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0003-0005-0000-000000000005">
+					<Name>Пол</Name>
+					<Type>
+						<xr:Ref>Enum.Пол</xr:Ref>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0003-0006-0000-000000000006">
+					<Name>СтавкаЧаса</Name>
+					<Type>
+						<xs:element name="Number">
+							<xs:attribute name="Length" type="xs:positiveInteger" fixed="15"/>
+							<xs:attribute name="FractionDigits" type="xs:positiveInteger" fixed="2"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+				<Attribute uuid="a1b2c3d4-0003-0007-0000-000000000007">
+					<Name>Телефон</Name>
+					<Type>
+						<xs:element name="String">
+							<xs:attribute name="Length" type="xs:positiveInteger" fixed="50"/>
+						</xs:element>
+					</Type>
+				</Attribute>
+			</Attributes>
+			<Forms>
+				<Form>ФормаАдминистратора</Form>
+				<Form>ФормаПользователя</Form>
+				<Form>ФормаСписка</Form>
+			</Forms>
+		</Properties>
+		<ChildObjects/>
+	</Catalog>
+</MetaDataObject>

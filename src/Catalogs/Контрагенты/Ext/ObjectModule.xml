@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module xmlns="http://v8.1c.ru/8.3/managed-application/module" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Procedure name="ПриЗаписи">
+		<Parameter name="Запись">
+			<Type>
+				<xs:element name="DataWriter"/>
+			</Type>
+		</Parameter>
+		<Parameter name="Отказ">
+			<Type>
+				<xs:element name="Boolean"/>
+			</Type>
+		</Parameter>
+		<Body>
+			<Line>
+				<Val>Если Тип = Перечисления.ЮридическоеФизическоеЛицо.ЮридическоеЛицо Тогда</Val>
+			</Line>
+			<Line>
+				<Val>	Если НЕ ПустаяСтрока(ИНН) Тогда</Val>
+			</Line>
+			<Line>
+				<Val>		Если СтрДлина(ИНН) &lt;&gt; 10 Тогда</Val>
+			</Line>
+			<Line>
+				<Val>			Отказ = Истина;</Val>
+			</Line>
+			<Line>
+				<Val>			Сообщить("ИНН юридического лица должен содержать 10 символов.");</Val>
+			</Line>
+			<Line>
+				<Val>		КонецЕсли;</Val>
+			</Line>
+			<Line>
+				<Val>	КонецЕсли;</Val>
+			</Line>
+			<Line>
+				<Val>ИначеЕсли Тип = Перечисления.ЮридическоеФизическоеЛицо.ФизическоеЛицо Тогда</Val>
+			</Line>
+			<Line>
+				<Val>	Если НЕ ПустаяСтрока(ИНН) Тогда</Val>
+			</Line>
+			<Line>
+				<Val>		Если СтрДлина(ИНН) &lt;&gt; 12 Тогда</Val>
+			</Line>
+			<Line>
+				<Val>			Отказ = Истина;</Val>
+			</Line>
+			<Line>
+				<Val>			Сообщить("ИНН физического лица должен содержать 12 символов.");</Val>
+			</Line>
+			<Line>
+				<Val>		КонецЕсли;</Val>
+			</Line>
+			<Line>
+				<Val>	КонецЕсли;</Val>
+			</Line>
+			<Line>
+				<Val>КонецЕсли;</Val>
+			</Line>
+		</Body>
+	</Procedure>
+	<Procedure name="ПриСозданииНового">
+		<Parameter name="Объект">
+			<Type>
+				<xs:element name="CatalogObject.Контрагенты"/>
+			</Type>
+		</Parameter>
+		<Body>
+			<Line>
+				<Val>Объект.Тип = Перечисления.ЮридическоеФизическоеЛицо.ЮридическоеЛицо;</Val>
+			</Line>
+			<Line>
+				<Val>Объект.Ответственный = ПараметрыСеанса.ТекущийСотрудник;</Val>
+			</Line>
+		</Body>
+	</Procedure>
+</Module>
