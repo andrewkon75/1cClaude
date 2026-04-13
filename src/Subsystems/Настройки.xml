@@ -13,6 +13,9 @@
 					<xr:MDObjectRef>Catalog.Контрагенты</xr:MDObjectRef>
 				</xr:Item>
 				<xr:Item xsi:type="xr:MDObject">
+					<xr:MDObjectRef>CommonForm.НастройкаПрограммы</xr:MDObjectRef>
+				</xr:Item>
+				<xr:Item xsi:type="xr:MDObject">
 					<xr:MDObjectRef>CommonCommand.НастройкаПрограммы</xr:MDObjectRef>
 				</xr:Item>
 			</Content>

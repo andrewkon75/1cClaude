@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module xmlns="http://v8.1c.ru/8.2/managed-application/module" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ManagedFormModule>
+<Line>
+<Val>Процедура ПриСозданииНаСервере(ОбъектНаСервере, Форма, СтандартнаяОбработка)</Val>
+</Line>
+<Line>
+<Val>	ОбъектНаСервере.Константы = Константы.СоздатьНабор();</Val>
+</Line>
+<Line>
+<Val>	ОбъектНаСервере.Константы.Прочитать();</Val>
+</Line>
+<Line>
+<Val>КонецПроцедуры</Val>
+</Line>
+<Line>
+<Val></Val>
+</Line>
+<Line>
+<Val>Процедура ПередЗаписьюНаСервере(ОбъектНаСервере, Форма, СтандартнаяОбработка)</Val>
+</Line>
+<Line>
+<Val>	ОбъектНаСервере.Константы.Записать();</Val>
+</Line>
+<Line>
+<Val>КонецПроцедуры</Val>
+</Line>
+</ManagedFormModule>
+</Module>
