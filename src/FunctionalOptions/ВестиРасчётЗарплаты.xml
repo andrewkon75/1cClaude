@@ -7,6 +7,9 @@
 			<Comment/>
 			<Content>
 				<xr:Item>
+					<xr:MetaData>Constant.ВестиРасчётЗарплаты</xr:MetaData>
+				</xr:Item>
+				<xr:Item>
 					<xr:MetaData>Catalog.Сотрудники.Attribute.Оклад</xr:MetaData>
 				</xr:Item>
 				<xr:Item>

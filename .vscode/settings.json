@@ -1,5 +1,5 @@
 {
-    "bsl.languageServer.jar": "/home/andrew/.local/share/bsl-language-server/bsl-language-server-0.29.0.jar",
+    "bsl.languageServer.jar": "/home/andrew/.local/share/bsl-language-server/bsl-language-server-0.29.0-exec.jar",
     "bsl.languageServer.trace.server": "off",
     "bsl.languageserver.diagnostics.compute": "onType",
     "bsl.languageserver.configurationFile": ".bsl-language-server.json"

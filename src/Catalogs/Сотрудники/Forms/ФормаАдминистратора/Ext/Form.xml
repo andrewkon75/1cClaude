@@ -98,7 +98,7 @@
 					<Val>Символы = "abcdefghijklmnopqrstuvwxyz0123456789";</Val>
 				</Line>
 				<Line>
-					<Val>ДлинаПароля = 6;</Val>
+					<Val>ДлинаПароля = 5;</Val>
 				</Line>
 				<Line>
 					<Val>Пароль = "";</Val>

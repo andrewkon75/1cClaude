@@ -107,6 +107,13 @@
 			<xr:Use>true</xr:Use>
 			<xr:Condition/>
 		</xr:Right>
+		<!-- Параметры сеанса: чтение -->
+		<xr:Right>
+			<xr:Name>Read</xr:Name>
+			<xr:Value>SessionParameter.ТекущийСотрудник</xr:Value>
+			<xr:Use>true</xr:Use>
+			<xr:Condition/>
+		</xr:Right>
 		<!-- Общие права -->
 		<xr:Right>
 			<xr:Name>InteractiveOpenHelp</xr:Name>

@@ -59,7 +59,7 @@
 			</Line>
 		</Body>
 	</Procedure>
-	<Procedure name="ПриСозданииНового">
+	<Procedure name="ОбработкаЗаполнения">
 		<Parameter name="Объект">
 			<Type>
 				<xs:element name="CatalogObject.Контрагенты"/>
