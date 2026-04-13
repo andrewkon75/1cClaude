@@ -1,0 +1,22 @@
+# 1C Enterprise
+*.1CD
+*.cd
+*.ib
+*.lg
+*.rlg
+*.tmp
+*.mxl.bak
+*.cdtproject
+*.cdtsync
+*.settings
+
+# gitsync
+.gitsync/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/settings.json

@@ -1,0 +1,22 @@
+{
+    "$schema": "https://1c-syntax.github.io/bsl-language-server/configuration/schema.json",
+    "configurationRoot": "./src",
+    "diagnostics": {
+        "compute": "onType",
+        "skipSupport": "NEVER",
+        "reportType": "FULL"
+    },
+    "codeAction": {
+        "quickFix": {
+            "disable": false
+        },
+        "createClassFromName": {
+            "disable": false
+        }
+    },
+    "parameters": {
+        "symbolTable": {
+            "fullScanProcessing": true
+        }
+    }
+}
