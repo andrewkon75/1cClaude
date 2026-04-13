@@ -93,32 +93,7 @@
 	</Elements>
 	<Commands>
 		<Command name="СлучайныйПароль" id="1">
-			<Body>
-				<Line>
-					<Val>Символы = "abcdefghijklmnopqrstuvwxyz0123456789";</Val>
-				</Line>
-				<Line>
-					<Val>ДлинаПароля = 5;</Val>
-				</Line>
-				<Line>
-					<Val>Пароль = "";</Val>
-				</Line>
-				<Line>
-					<Val>Для i = 1 По ДлинаПароля Цикл</Val>
-				</Line>
-				<Line>
-					<Val>	Пароль = Пароль + Сред(Символы, СлучайноеЧисло(1, СтрДлина(Символы)), 1);</Val>
-				</Line>
-				<Line>
-					<Val>КонецЦикла;</Val>
-				</Line>
-				<Line>
-					<Val>Пароль = Пароль;</Val>
-				</Line>
-				<Line>
-					<Val>Элементы.Пароль.PasswordMode = Ложь;</Val>
-				</Line>
-			</Body>
+			<Action>СлучайныйПароль</Action>
 		</Command>
 	</Commands>
 </Form>

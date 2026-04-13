@@ -154,5 +154,38 @@
 <Line>
 <Val>КонецПроцедуры</Val>
 </Line>
+<Line>
+<Val></Val>
+</Line>
+<Line>
+<Val>Процедура СлучайныйПароль(Команда)</Val>
+</Line>
+<Line>
+<Val>	Символы = "abcdefghijklmnopqrstuvwxyz0123456789";</Val>
+</Line>
+<Line>
+<Val>	ДлинаПароля = 5;</Val>
+</Line>
+<Line>
+<Val>	Пароль = "";</Val>
+</Line>
+<Line>
+<Val>	Для i = 1 По ДлинаПароля Цикл</Val>
+</Line>
+<Line>
+<Val>		Пароль = Пароль + Сред(Символы, СлучайноеЧисло(1, СтрДлина(Символы)), 1);</Val>
+</Line>
+<Line>
+<Val>	КонецЦикла;</Val>
+</Line>
+<Line>
+<Val>	Объект.Пароль = Пароль;</Val>
+</Line>
+<Line>
+<Val>	Элементы.Пароль.PasswordMode = Ложь;</Val>
+</Line>
+<Line>
+<Val>КонецПроцедуры</Val>
+</Line>
 </ManagedFormModule>
 </Module>
