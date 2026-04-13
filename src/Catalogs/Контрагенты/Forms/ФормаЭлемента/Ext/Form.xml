@@ -5,7 +5,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 	</Events>
 	<Attributes>
 		<Attribute name="Объект" id="1">
